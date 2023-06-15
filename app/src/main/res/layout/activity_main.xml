@@ -10,7 +10,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -84,29 +89,29 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jumlah Pengeluaran Hari INI:"
-            android:layout_marginTop="228dp"
             android:layout_marginStart="18dp"
+            android:layout_marginTop="228dp"
             android:layout_marginEnd="18dp"
-            android:textSize="16dp"
-            android:textColor="@color/black"/>
+            android:text="Jumlah Pengeluaran Hari INI:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="100000"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
-            android:textSize="16sp"/>
+            android:hint="100000"
+            android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="18dp"
-            android:text="Submit"
             android:src="@drawable/bg_container"
+            android:text="Submit"
             android:textColor="@color/black"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
     </LinearLayout>
 

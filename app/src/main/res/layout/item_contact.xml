@@ -1,11 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvContact"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-    <ImageView
+    android:elevation="4dp"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_avatar"/>
+        android:layout_margin="8dp">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/baseline_contact_mail_24" />
+        <TextView
+            android:layout_toRightOf="@+id/tvNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Kontak"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="end"
+            android:text="Nama Kontak"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_toRightOf="@+id/tvNomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomer HP"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="50dp"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
