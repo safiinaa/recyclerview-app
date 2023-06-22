@@ -76,7 +76,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
             tvStatus = itemView.findViewById(R.id.tvStatus);
         }
         public void bindData(final KontakModel Item){
-            ivAvatar.setColorFilter(Color.parseColor(Item.getColor(), PorterDuff);
+            ivAvatar.setColorFilter(Color.parseColor(Item.getColor(), PorterDuff.Mode.SRC_IN);
+            
         }
     }
 }
