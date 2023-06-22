@@ -1,6 +1,8 @@
 package com.example.catatanpengeluaran;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,9 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
     private LayoutInflater LayoutInflater;
     private Context context;
     final ContactAdapter.OnItemClickListener listener;
+    public interface OnItemClickListener{
+
+    }
 
     public ContactAdapter(android.view.LayoutInflater mInflater, List<KontakModel> contactList, android.view.LayoutInflater layoutInflater, Context context, ContactAdapter.OnItemClickListener listener) {
         this.mInflater = mInflater;
@@ -32,19 +37,31 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
 
     @NonNull
     @Override
-    public ContactAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ContactViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_contact, null);
-        return new ContactAdapter.ContactViewHolder(View);
+        return new ContactAdapter.ContactViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContactAdapter holder, int position) {
+    public void onBindViewHolder(@NonNull ContactViewHolder holder, int position) {
     holder.bindData(contactList.get(position));
     }
 
     @Override
     public int getItemCount() {
+
         return contactList.size();
+    }
+    public void setItemCount(){
+        return contactList.size();
+    }
+
+    public void setItem(List<ContactModel> item){
+        contactList = item;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(ContactModel item);
     }
 
     public class ContactViewHolder extends RecyclerView.ViewHolder {
@@ -58,6 +75,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
             tvNomer= itemView.findViewById(R.id.tvNomer);
             tvStatus = itemView.findViewById(R.id.tvStatus);
         }
-
+        public void bindData(final KontakModel Item){
+            ivAvatar.setColorFilter(Color.parseColor(Item.getColor(), PorterDuff);
+        }
     }
 }
